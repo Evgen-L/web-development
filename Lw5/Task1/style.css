@@ -1,0 +1,55 @@
+html{
+    background: #fff
+}
+
+body{
+    /*margin: 0 auto;*/
+    margin-top: 100px;
+    margin-bottom: auto;
+    margin-left: 460px;
+    margin-right: auto;
+    height: 1000px;
+    max-width: 1000px;
+    background: white;
+    padding-left: 20px;
+    padding-right: 20.82;
+}
+
+.photo_object{
+    margin-right: 60px;
+}
+
+.dotted_lists{
+   /* margin-top: 50px;*/
+}
+.blue_subtitle{
+    font-size: 24px;
+    line-height: 32px;
+    color: #15a98c;
+    font-family: "Open Sans";
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.dotted_list{
+    /*width: 330px;
+    height: 260px;*/
+    font-size: 19px;
+    line-height: 36px;
+    color: #555555;
+    font-family: "Georgia";
+    padding-left: 20px;
+}
+
+.photo_plus_quote{
+    padding: 0px;
+     
+}
+
+.quotes_object{
+    margin-top: 50px;
+}
+
+.clear_both{
+    /*clear: both;*/
+}
