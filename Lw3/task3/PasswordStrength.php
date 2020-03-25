@@ -1,10 +1,9 @@
 <?php
-	function passwordStrength(string $password):?string
+	function passwordStrength():?int
 	{
 	     $strNew = $_GET["password"];
 		 $duplicateСharacters = $strNew;
 		 $countDuplicateCharacters = 1;
-		 $checkInd = 'Yes';
 		 $flagNumbers = 'False';
 		 $flagCapitalLetters = 'False';
 		 $flagLowerCase = 'False';
@@ -15,23 +14,23 @@
 		 $i = 1;
 		 while ($i < strlen($strNew))
 		 {
-			if ($strNew[$i] >= 'A') and ($strNew[$i] <= 'Z')) 
+            if (($strNew[$i] >= 'A') && ($strNew[$i] <= 'Z')) 
 			{
 			    $flagCapitalLetters = 'True';
 				$countCapitalLetters++;
 				$countAllSymbols++;
 				$passwordStrength = $passwordStrength + 4 + (($countAllSymbols-$countCapitalLetters)*2);
 			}
-			if ($strNew[$i] >= 'a') and ($strNew[$i] <= 'z')) 
+			if (($strNew[$i] >= 'a') && ($strNew[$i] <= 'z')) 
 			{
 			    $flagLowerCase = 'True';
 				$countLowerCase++;
 				$countAllSymbols++;
 				$passwordStrength = $passwordStrength + 4 + (($countAllSymbols-$countLowerCase)*2);
 			}
-			if ($strNew[$i] >= '0') and ($strNew[$i] <= '9')) 
+			if (($strNew[$i] >= '0') && ($strNew[$i] <= '9')) 
 			{
-			    $flagNumbers = 'True';
+                $flagNumbers = 'True';
 				$countNumbers++;
 				$countAllSymbols++;
 				$passwordStrength = $passwordStrength + 8;
@@ -39,15 +38,17 @@
 			$j = 1;
 			while ($j < strlen($duplicateСharacters))
 			{
-		     if (($strNew[$i] = $duplicateСharacters[$j]) and (i != j))  
-			 {
-			    $countDuplicateCharacters++;
-				$duplicateСharacters[$j] = ' ';
-			 }
+		        if (($strNew[$i] = $duplicateСharacters[$j]) && ($i != $j))  
+			     {
+			         $countDuplicateCharacters++;
+				     $duplicateСharacters[$j] = ' '; 
+			     }
+                $j++;
 			}	
 			$i++;
+            print $passwordStrength;
 		 }
-		 if ($flagNumbers = 'False') or (($flagLowerCase = 'False') and ($flagCapitalLetters = 'False'))
+		 if (($flagNumbers = 'False') or (($flagLowerCase = 'False') && ($flagCapitalLetters = 'False')))
 		 {
 			$passwordStrength = $passwordStrength - $countAllSymbols;
 		 }
@@ -58,4 +59,5 @@
 		 return $passwordStrength;
 		 
 	}
-	echo passwordStrength('');
+	echo passwordStrength();
+?>
