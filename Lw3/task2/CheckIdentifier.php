@@ -1,5 +1,5 @@
 <?php
-	function checkIdentifier(string $identifier):?string
+	function checkIdentifier()
 	{
 	     $strNew = $_GET["identifier"];
 		 $checkInd = 'Yes';
@@ -28,4 +28,4 @@
 		  }
 		 return $strNew;
 	}
-	echo checkIdentifier('');
+	echo checkIdentifier();

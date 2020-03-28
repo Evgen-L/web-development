@@ -1,44 +1,37 @@
 <?php
-	function passwordStrength():?int
+	function passwordSafety()
 	{
 	     $strNew = $_GET["password"];
 		 $duplicateСharacters = $strNew;
 		 $countDuplicateCharacters = 1;
-		 $flagNumbers = 'False';
-		 $flagCapitalLetters = 'False';
-		 $flagLowerCase = 'False';
 		 $countCapitalLetters = 0;
 		 $countLowerCase = 0;
 		 $countNumbers = 0;
-		 $countAllSymbols = 0;
-		 $i = 1;
-		 while ($i < strlen($strNew))
+         $passwordSafety = 0;
+		 $i = 0;
+		 while ($i <= strlen($strNew))
 		 {
-            if (($strNew[$i] >= 'A') && ($strNew[$i] <= 'Z')) 
+            if (($strNew[$i] >= 'A') and ($strNew[$i] <= 'Z')) 
 			{
-			    $flagCapitalLetters = 'True';
+                $passwordSafety = $passwordSafety + 4;
 				$countCapitalLetters++;
-				$countAllSymbols++;
-				$passwordStrength = $passwordStrength + 4 + (($countAllSymbols-$countCapitalLetters)*2);
 			}
-			if (($strNew[$i] >= 'a') && ($strNew[$i] <= 'z')) 
+			if (($strNew[$i] >= 'a') and ($strNew[$i] <= 'z')) 
 			{
-			    $flagLowerCase = 'True';
+                $passwordSafety = $passwordSafety + 4;
 				$countLowerCase++;
-				$countAllSymbols++;
-				$passwordStrength = $passwordStrength + 4 + (($countAllSymbols-$countLowerCase)*2);
 			}
-			if (($strNew[$i] >= '0') && ($strNew[$i] <= '9')) 
+			if (($strNew[$i] >= '0') and ($strNew[$i] <= '9')) 
 			{
-                $flagNumbers = 'True';
 				$countNumbers++;
 				$countAllSymbols++;
-				$passwordStrength = $passwordStrength + 8;
+				$passwordSafety = $passwordSafety + 8;
 			}
-			$j = 1;
-			while ($j < strlen($duplicateСharacters))
+			$j = 0;
+			while ($j <= strlen($duplicateСharacters))
 			{
-		        if (($strNew[$i] = $duplicateСharacters[$j]) && ($i != $j))  
+
+		        if (($strNew[$i] === $duplicateСharacters[$j]) and ($i != $j))  
 			     {
 			         $countDuplicateCharacters++;
 				     $duplicateСharacters[$j] = ' '; 
@@ -46,18 +39,24 @@
                 $j++;
 			}	
 			$i++;
-            print $passwordStrength;
 		 }
-		 if (($flagNumbers = 'False') or (($flagLowerCase = 'False') && ($flagCapitalLetters = 'False')))
+		 if (($countNumbers === 0) or (($countLowerCase === 0) and ($countCapitalLetters === 0)))
 		 {
-			$passwordStrength = $passwordStrength - $countAllSymbols;
-		 }
+			$passwordSafety = $passwordSafety - strlen($strNew);
+		 } 
 		 if ($countDuplicateCharacters > 1)
 		 {
-	        $passwordStrength = $passwordStrength - $countDuplicateCharacters;
-		 }	 
-		 return $passwordStrength;
-		 
+	        $passwordSafety = $passwordSafety - $countDuplicateCharacters + 1;
+		 }	
+         if ($countCapitalLetters > 0)
+         {
+             $passwordSafety = $passwordSafety + ((strlen($strNew) - $countCapitalLetters) * 2);
+         }
+         if ($countLowerCase > 0)
+         {
+             $passwordSafety = $passwordSafety + ((strlen($strNew) - $countLowerCase) * 2);
+         }
+		 return $passwordSafety;
 	}
-	echo passwordStrength();
+	echo passwordSafety();
 ?>

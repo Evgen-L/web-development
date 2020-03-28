@@ -1,0 +1,18 @@
+﻿PROGRAM HelloDear(INPUT, OUTPUT);
+USES
+  Dos;
+VAR
+  Name, Str: STRING;
+BEGIN
+  WRITELN('Content-Type: text/plain');
+  WRITELN;
+  Str := GetEnv('QUERY_STRING');
+  IF (POS('=', Str) <> 0)
+  THEN
+    BEGIN
+      Name := COPY(Str, POS('=', STR), (LENGTH(Str)-POS('=', Str)));
+      WRITELN(Name)
+    END
+  ELSE
+    WRITELN('Hello Anonymous!')
+END.
