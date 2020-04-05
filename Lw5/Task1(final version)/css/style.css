@@ -7,6 +7,8 @@
     margin-right: auto;
     max-width: 1000px;
     grid-row-gap: 50px;
+    overflow-y:hidden;
+    overflow-x:hidden;
     grid-column-gap: 60px
 }
 
