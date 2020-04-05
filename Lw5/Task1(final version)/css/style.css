@@ -61,6 +61,7 @@
 }
 
 .blue_subtitle1 {
+    margin: 0;
     padding-left: 0px;
     line-height: 21px;
     font-size: 24px;
@@ -81,16 +82,16 @@
 
 .blue_subtitle2 {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 25px;
     color: #15a98c;
     font-family: "Open Sans";
     font-weight: 600;
-    margin-top: 41px;
+    margin-top: 44px;
     letter-spacing: 0.9px
 }
 
 .dotted_list2 {
-    margin-top: 12px;
+    margin-top: 0px;
     font-size: 19px;
     line-height: 36px;
     color: #555555;
@@ -101,11 +102,11 @@
 .wrapper > div.main_text {
     grid-column: 2/3;
     display: grid;
-    grid-template-rows: 46px 72px 234px 57px 201px 50px;
+    grid-template-rows: 46px 53px 223px 68px 201px 50px;
     grid-row-gap: 0px
 }
 
-.Zhenya {
+.my_name {
     margin-top: 16.1px;
     margin-left: 8px;
     font-size: 45px;
