@@ -1,65 +1,67 @@
-body{
+body {
     padding: 0;
     margin: 0;
     color: white;
 }
-header{
-   padding-left: 24.9479167%; 
-   max-height: 5px; 
-   display: grid; 
-   width: 100%;
-   max-width: 1920px;
-   margin: 0;
-   grid-template-columns: 140px 159px 233px;
-   padding-left: 449px
-}
-.button_1{
-    display: grid; 
-    grid-template-columns: 1rf 1rf;
-    grid-gap: ;
-    justify-content: center; 
+
+header {
+    padding-left: 24.9479167%;
+    max-height: 5px;
+    display: grid;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0;
+    grid-template-columns: 140px 159px 233px;
+    padding-left: 449px
 }
 
-.button_2{
-    display: grid; 
+.button_1 {
+    display: grid;
     grid-template-columns: 1rf 1rf;
     grid-gap: ;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.button_3{
-    display: grid; 
+.button_2 {
+    display: grid;
     grid-template-columns: 1rf 1rf;
     grid-gap: ;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.text_1{
+.button_3 {
+    display: grid;
+    grid-template-columns: 1rf 1rf;
+    grid-gap: ;
+    justify-content: center;
+}
+
+.text_1 {
     font-size: 19px;
     line-height: 32px;
     color: #333333;
     font-family: "Georgia";
 }
 
-.text_2{
+.text_2 {
     font-size: 19px;
     line-height: 32px;
     color: #333333;
     font-family: "Georgia";
 }
 
-.text_3{
+.text_3 {
     font-size: 19px;
     line-height: 32px;
     color: #333333;
     font-family: "Georgia";
 }
 
-.water{
+.water {
     margin-top: 45px;
     max-width: 100%;
     max-height: 1000px;
-    filter: brightness(50%);      
+    filter: brightness(50%);
 }
 
 .conteiner_1 {
@@ -236,7 +238,7 @@ header{
     font-family: "Georgia"
 }
 
-.now_about_films{
+.now_about_films {
     margin-top: 94px;
     padding-left: 18.90%;
     font-size: 36px;
@@ -246,7 +248,7 @@ header{
     font-weight: 400;
 }
 
-.conteiner_2{
+.conteiner_2 {
     max-width: 1197px;
     max-height: 1056px;
     margin-left: 18.9%;
@@ -254,17 +256,17 @@ header{
     grid-column-gap: 1.75%;
     grid-row-gap: 20px;
     grid-template-columns: repeat(4, 23.75%);
-    grid-template-rows: 192px 11px 491px ;
+    grid-template-rows: 192px 11px 491px;
 }
 
-.films{
+.films {
     width: 285px;
     height: 190px;
     border-radius: 5px;
     background-color: #464646;
 }
 
-h1{
+h1 {
     font-size: 23px;
     line-height: 0px;
     padding-left: 0.0px;
@@ -272,14 +274,15 @@ h1{
     font-family: "Open Sans";
     font-weight: 700;
 }
-.text_under_films{
+
+.text_under_films {
     font-size: 16px;
     line-height: 28px;
     color: #555555;
     font-family: "Georgia";
 }
 
-.button_all{
+.button_all {
     display: block;
     text-align: center;
     margin-top: 83px;
@@ -290,7 +293,7 @@ h1{
     background-color: #098d71;
 }
 
-.text_for_button_all{
+.text_for_button_all {
     margin-top: 1px;
     font-size: 19px;
     line-height: 49px;
@@ -298,7 +301,7 @@ h1{
     font-family: "Georgia";
 }
 
-.button_all:hover{
+.button_all:hover {
     display: block;
     text-align: center;
     margin-top: 83px;
