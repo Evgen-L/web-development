@@ -4,6 +4,7 @@ body{
     color: white;
 }
 header{
+   padding-left: 24.9479167%; 
    max-height: 5px; 
    display: grid; 
    width: 100%;
