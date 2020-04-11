@@ -1,27 +1,26 @@
-function isPrimeNumber(n1) {
-    let Num;
-    if (Array.isArray(n1)) {
-        for (let i = 0; i < n1.length; i++) {
-            (checkOneNumber(n1[i]))
+function isPrimeNumber(arrayOrNumber) {
+    if (Array.isArray(arrayOrNumber)) {
+        for (let i = 0; i < arrayOrNumber.length; i++) {
+            (checkOneNumber(arrayOrNumber[i]))
         }
     } else {
-        checkOneNumber(n1)
+        checkOneNumber(arrayOrNumber)
     }
 }
 
-function checkOneNumber(n2) {
-    if ((typeof n2 == "number") && (n2 > 0)) {
+function checkOneNumber(num) {
+    if ((typeof num == "number") && (num > 1) && isInteger(num)) {
         let j = 2;
-        let Num = "simple";
+        let result = "simple";
         while (j <= (n2 - 1)) {
             if (n2 % j == 0) {
-                Num = "compound";
+                result = "compound";
                 break
             }
             j++;
         }
-        console.log(`${n2} is a ${Num} number`)
+        console.log(`${num} is a ${result} number`)
     } else {
-        console.log(`${n2} isn't a natural number`)
+        console.log(`${num} isn't compound and simple number`)
     }
 }
