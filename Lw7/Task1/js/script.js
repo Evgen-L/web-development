@@ -9,7 +9,7 @@ function isPrimeNumber(arrayOrNumber) {
 }
 
 function checkOneNumber(num) {
-    if ((typeof num == "number") && (num > 1) && isInteger(num)) {
+    if ((typeof num == "number") && (num > 1) && Number.isInteger(num)) {
         let j = 2;
         let result = "simple";
         while (j <= (n2 - 1)) {
