@@ -68,7 +68,7 @@ header {
     display: grid;
     position: relative;
     grid-template-columns: 330px 569px;
-    margin-left: 25.2%;
+    margin: 0 calc(56.2% - 590px);
     margin-top: -194px;
     max-width: 1000px;
     grid-row-gap: 50px;
@@ -249,6 +249,7 @@ header {
 }
 
 .conteiner_2 {
+    margin: 0 calc(56.2% - 590px);
     max-width: 1197px;
     max-height: 1056px;
     margin-left: 18.9%;

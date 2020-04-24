@@ -3,8 +3,7 @@
     grid-template-columns: 330px 569px;
     margin-top: 100px;
     margin-bottom: auto;
-    margin-left: 471px;
-    margin-right: auto;
+    padding: 0 calc(50% - 472px);
     max-width: 1000px;
     grid-row-gap: 50px;
     overflow-y:hidden;
