@@ -123,7 +123,7 @@ SELECT
   students.name,
   students.surname,
   students.patronymic,
-  classes.name AS CLASSES,
+  classes.name AS classes,
   faculty.name AS 'faculty'
   FROM
   students
