@@ -103,9 +103,9 @@ SELECT
     surname,
     patronymic,
     age
-    FROM
+FROM
     students
-    WHERE
+WHERE
     age = 19;
     
 SELECT
@@ -113,23 +113,35 @@ SELECT
     students.surname,
     students.patronymic,
     classes.name AS CLASSES
-    FROM
+FROM
     students 
     JOIN classes ON students.name_class = classes.id
-    WHERE
+WHERE
     classes.name = 'ПС-11';
-    
+
+SELECT
+  students.name,
+  students.surname,
+  students.patronymic,
+  faculty.name AS 'faculty'
+FROM
+  students
+  JOIN classes ON students.name_class = classes.id
+  JOIN faculty ON classes.name_faculty = faculty.id  
+WHERE
+  faculty.name = 'ФИиВТ';
+      
 SELECT
   students.name,
   students.surname,
   students.patronymic,
   classes.name AS classes,
   faculty.name AS 'faculty'
-  FROM
+FROM
   students
   JOIN classes ON students.name_class = classes.id
   JOIN faculty ON classes.name_faculty = faculty.id
-  WHERE
-      faculty.name = 'ФИиВТ'
-  AND  
-      classes.name = 'ИВТ-12';
+WHERE
+  students.name = 'Эрнест'
+  AND
+  students.surname = 'Александров'

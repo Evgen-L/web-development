@@ -112,7 +112,7 @@ function checkQuantityNumbersAndOperators(str)//определяем что ко
   let countOperators = 0;
   let operators = "/+*-";
   let symbols = "+- ";
-  let numbers = "1234567890"
+  let numbers = "1234567890";
   for (let position = 0; position <= (str.length - 2); position++)
   {
     if ((symbols.indexOf(str[position]) != -1) && (isNaN(parseFloat(str[position + 1])) == false))
@@ -173,9 +173,10 @@ function searchPositions(posOperator, posArgument, str)//функция нахо
 
 function declaringSecondArgument(argument2, posArgument, str)//определяет второй аргумент
 {
-  if (isInteger(str[posArgument]))
+  let numbers = "1234567890";
+  if ((symbols.indexOf(str[posArgument]) != -1))
   {
-    while (isInteger(str[posArgument]))
+    while ((symbols.indexOf(str[posArgument]) != -1))
     {
       posArgument++
     }
@@ -183,7 +184,7 @@ function declaringSecondArgument(argument2, posArgument, str)//определя�
   } else
   {
     posArgument++;
-    while (isInteger(str[posArgument]))
+    while ((symbols.indexOf(str[posArgument]) != -1))
     {
       posArgument++
     }
