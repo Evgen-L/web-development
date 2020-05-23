@@ -13,7 +13,7 @@
         {
             if ((($strNew[$i] < 'A') or ($strNew[$i] > 'Z')) and (($strNew[$i] < 'a') or ($strNew[$i] > 'z')) and (($strNew[$i] < '0') or ($strNew[$i] > '9')))
             {
-                $chekInd = 'No';
+                $checkInd = 'False';
                 echo ($strNew[$i]. "Этот символ недопустим </br>");
             }
             $i++;
