@@ -9,11 +9,11 @@ function isPrimeNumber(arrayOrNumber) {
 }
 
 function checkOneNumber(num) {
-    if ((typeof num == "number") && (num > 1) && Number.isInteger(num)) {
+    if ((typeof num == "number") ) {
         let j = 2;
         let result = "simple";
-        while (j <= (n2 - 1)) {
-            if (n2 % j == 0) {
+        while (j <= (num - 1)) {
+            if (num % j == 0) {
                 result = "compound";
                 break
             }
@@ -21,6 +21,6 @@ function checkOneNumber(num) {
         }
         console.log(`${num} is a ${result} number`)
     } else {
-        console.log(`${num} isn't compound and simple number`)
+        console.log(`${num} is not compound and simple number`)
     }
 }
