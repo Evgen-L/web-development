@@ -14,8 +14,9 @@ CREATE TABLE faculty
 (
     id               INT AUTO_INCREMENT NOT NULL,
     name             VARCHAR(255)       NOT NULL,
-    name_faculty     VARCHAR(255)       NOT NULL,
-    PRIMARY KEY (id)
+    name_faculty     INT                NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (name_faculty) REFERENCES faculty (id)
 ) DEFAULT CHARACTER SET utf8mb4
   COLLATE 'utf8mb4_unicode_ci'
   ENGINE = InnoDB
@@ -28,12 +29,29 @@ CREATE TABLE students
     surname          VARCHAR(255)       NOT NULL,
     patronymic       VARCHAR(255)       NOT NULL,
     age              INT                NOT NULL,
-    name_class       VARCHAR(255)       NOT NULL,
-    PRIMARY KEY (id)
+    name_class       INT                NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (name_class) REFERENCES classes (id)
 ) DEFAULT CHARACTER SET utf8mb4
   COLLATE 'utf8mb4_unicode_ci'
   ENGINE = InnoDB
 ;
+
+insert into faculty (name) VALUES
+    ('ФИиВТ'),
+    ('ФСТ'),
+    ('РТФ');   
+
+insert into classes (name, name_faculty) VALUES
+    ('ПС-11', '1'),
+    ('ИВТ-12', '1'),
+    ('БиС-21', '1'),
+    ('Конфликтология-31', '2'),
+    ('Сервис-42', '2'),
+    ('Туризм-13', '2'),
+    ('Радиотехника-23', '3'),
+    ('ЭиН-21', '3'),
+    ('РСК-43', '3');
 
 insert into students (name, surname, patronymic, age, name_class) VALUES
     ('Денис', 'Актуганов', 'Алексеевич', '18', '1'),
@@ -82,21 +100,7 @@ insert into students (name, surname, patronymic, age, name_class) VALUES
     ('Семён', 'Явдохин', 'Олегович', '18', '9'),
     ('Владимир', 'Яковлев', 'Михайлович',   '18', '9');
     
-insert into classes (name, name_faculty) VALUES
-    ('ПС-11', '1'),
-    ('ИВТ-12', '1'),
-    ('БиС-21', '1'),
-    ('Конфликтология-31', '2'),
-    ('Сервис-42', '2'),
-    ('Туризм-13', '2'),
-    ('Радиотехника-23', '3'),
-    ('ЭиН-21', '3'),
-    ('РСК-43', '3');
-    
-insert into faculty (name) VALUES
-    ('ФИиВТ'),
-    ('ФСТ'),
-    ('РТФ');    
+
    
 SELECT
     name,
@@ -108,6 +112,8 @@ FROM
 WHERE
     age = 19;
     
+    
+    
 SELECT
     students.name,
     students.surname,
@@ -118,6 +124,8 @@ FROM
     JOIN classes ON students.name_class = classes.id
 WHERE
     classes.name = 'ПС-11';
+
+
 
 SELECT
   students.name,
@@ -144,4 +152,4 @@ FROM
 WHERE
   students.name = 'Эрнест'
   AND
-  students.surname = 'Александров'
+  students.surname = 'Александров';
