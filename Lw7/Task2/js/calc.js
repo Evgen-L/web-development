@@ -161,7 +161,8 @@ function calculation(str)//вычисления
 
 function searchPositions(posOperator, posArgument, str)//функция находит позиции первых оператора и аргумента
 {
-  while ( (isInteger(str[posArgument]) == false ) && ( (str[posArgument] != '+') || (isInteger(str[posArgument + 1]) == false) ) && ( (str[posArgument] != '-') || (isInteger(str[posArgument + 1]) == false) ) )//двигай позицию пока не найдем чило или число со знаком
+  let numbers = "1234567890";
+  while ( (numbers.indexOf(str[posArgument]) == -1)  && ( (str[posArgument] != '+') || (numbers.indexOf(str[posArgument + 1]) == -1) ) && ( (str[posArgument] != '-') || (numbers.indexOf(str[posArgument + 1]) == -1) ) )//двигай позицию пока не найдем чило или число со знаком
   {
     posArgument++
   }
@@ -174,9 +175,9 @@ function searchPositions(posOperator, posArgument, str)//функция нахо
 function declaringSecondArgument(argument2, posArgument, str)//определяет второй аргумент
 {
   let numbers = "1234567890";
-  if ((symbols.indexOf(str[posArgument]) != -1))
+  if ((numbers.indexOf(str[posArgument]) != -1))
   {
-    while ((symbols.indexOf(str[posArgument]) != -1))
+    while ((numbers.indexOf(str[posArgument]) != -1))
     {
       posArgument++
     }
@@ -184,7 +185,7 @@ function declaringSecondArgument(argument2, posArgument, str)//определя�
   } else
   {
     posArgument++;
-    while ((symbols.indexOf(str[posArgument]) != -1))
+    while ((numbers.indexOf(str[posArgument]) != -1))
     {
       posArgument++
     }
