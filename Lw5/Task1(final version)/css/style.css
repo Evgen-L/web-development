@@ -45,14 +45,10 @@ body{
 
 .greg {
     grid-column: 2/3;
-    grid-row: 3;
     padding-left: 64.5px;
-    font-size: 15.5px;
-    line-height: 42px;
+    filter: brightness(100%);
+    font: 700 16px/2.7 "Open Sans";
     color: #333333;
-    font-family: "Open Sans";
-    font-weight: 800;
-    letter-spacing: 0.545px
 }
 
 
@@ -109,14 +105,11 @@ body{
 }
 
 .my_name {
-    margin-top: 16.1px;
-    margin-left: 8px;
-    font-size: 45px;
-    line-height: 0px;
+    margin-top: -6px;
+    margin-left: 5px;
+    font: 700 48px/0.9 "Open Sans";
     color: #333333;
-    font-family: "Open Sans";
-    font-weight: 700;
-    letter-spacing: 3.3px
+   
 }
 
 .blue_block {
@@ -158,12 +151,15 @@ body{
     font-family: "Georgia"
 }
 
-.write_me {
-    padding-left: 0.5px;
-    width: 562px;
-    height: 263px;
-    font-size: 19px;
-    line-height: 32px;
-    color: #15a98b;
-    font-family: "Georgia"
+.link 
+{
+    padding-left: 1px;
+    font: 19px/1.68 "Georgia";
+    color: #15a98c;
+    text-decoration: none;
+    margin-top: 19px;
+}
+.link span 
+{
+    border-bottom: 1px solid #15a98c;
 }
