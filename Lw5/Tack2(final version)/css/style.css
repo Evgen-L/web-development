@@ -296,18 +296,29 @@ footer {
 
 .buttons > div:hover {
     background-color: #15a98c;
-    cursor: pointer
+
 }
 
-.buttons > div:hover > .text {
-    color: #f5f5f5;
-    cursor: pointer
-}
-
-.buttons > div > .text > img {
-    filter: brightness(0%)
-}
-
-.buttons > div:hover > .text > img {
+.button_1:hover table tr td img {
     filter: brightness(400%)
+}
+
+.button_1:hover table tr td span {
+    color: white
+}
+
+.button_2:hover table tr td img {
+    filter: brightness(400%)
+}
+
+.button_2:hover table tr td span {
+    color: white
+}
+
+.button_3:hover table tr td img {
+    filter: brightness(400%)
+}
+
+.button_3:hover table tr td span {
+    color: white
 }
