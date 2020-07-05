@@ -1,22 +1,17 @@
-<!doctype html>
-<html>
-<meta charset='utf-8'>
+window = addEventListener('load', Stan);
 
-<head>
-    <title>Stan</title>
-</head>
+function Stan() {
+    const c = document.getElementById("Stan");
 
-<body>
-    <canvas id="Stan" height="1000" width="1000"></canvas>
-    <script>
-        var c = document.getElementById("Stan");
-        var ctx = c.getContext("2d");
-        //stan 
-        //штаны
+    function pants() {
+        const ctx = c.getContext("2d");
         ctx.fillStyle = '#3872c3';
         ctx.rect(116, 161, 80.1, 34);
         ctx.fill();
-        //тело
+    }
+
+    function body() {
+        const ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.ellipse(154, 181, 55, 73, 0, Math.PI + 0.1, 2 * Math.PI - 0.1);
         ctx.fillStyle = '#d26f5f';
@@ -27,7 +22,10 @@
         ctx.lineTo(202, 180);
         ctx.quadraticCurveTo(156.5, 193, 111, 180);
         ctx.fill();
-        //пуговицы и застежка
+    }
+
+    function buttonsAndClasp() {
+        const ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.fillStyle = '#3b3236';
         ctx.arc(150, 154, 1.5, 0, Math.PI * 2, true);
@@ -39,7 +37,10 @@
         ctx.moveTo(153.5, 186);
         ctx.lineTo(155.5, 150);
         ctx.stroke();
-        //воротник
+    }
+
+    function collar() {
+        const ctx = c.getContext("2d");
         ctx.beginPath(); //левый
         ctx.fillStyle = '#ff2042';
         ctx.strokeStyle = '#91313b'
@@ -61,7 +62,10 @@
         ctx.quadraticCurveTo(163, 157, 154.5, 149);
         ctx.stroke();
         ctx.fill();
-        //руки 
+    }
+
+    function hands() {
+        const ctx = c.getContext("2d");
         ctx.beginPath(); //левая
         ctx.fillStyle = '#ff1c3d';
         ctx.arc(108, 170, 9, 0, 2 * Math.PI);
@@ -80,7 +84,10 @@
         ctx.arc(192.3, 170.2, 4, 0, 2 * Math.PI);
         ctx.fill();
         ctx.stroke();
-        //вырезы
+    }
+
+    function outlines() {
+        const ctx = c.getContext("2d");
         ctx.beginPath(); //левый
         ctx.lineWidth = 0.5;
         ctx.moveTo(115, 164);
@@ -90,7 +97,10 @@
         ctx.moveTo(192, 167);
         ctx.lineTo(189, 155);
         ctx.stroke();
-        //cтупни
+    }
+
+    function feet() {
+        const ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.strokeStyle = 'black';
         ctx.lineWidth = 1;
@@ -101,11 +111,18 @@
         ctx.quadraticCurveTo(133, 190, 110, 197);
         ctx.stroke();
         ctx.fill();
-        //голова
+    }
+
+    function head() {
+        const ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.fillStyle = '#ffeac1';
         ctx.arc(153, 86, 58, 0, Math.PI * 2, true);
         ctx.fill();
+    }
+
+    function eyes() {
+        const ctx = c.getContext("2d");
         //левый белок   
         ctx.beginPath();
         ctx.fillStyle = '#fff';
@@ -130,7 +147,11 @@
         ctx.fillStyle = '#000';
         ctx.arc(162.5, 92.5, 1.8, 0, Math.PI * 2, true);
         ctx.fill();
+    }
+
+    function mouth() {
         //ротовая полость 
+        const ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.fillStyle = '#322d31';
         ctx.moveTo(140, 122);
@@ -168,12 +189,15 @@
         ctx.lineTo(143, 122.5);
         ctx.lineTo(149.5, 122.5);
         ctx.fill();
-        //шапка
+    }
+
+    function cap() {
+        const ctx = c.getContext("2d");
         ctx.beginPath(); //синяя часть
         ctx.fillStyle = '#36c';
         ctx.arc(153, 82, 57, -0.2, 3.3, true);
         ctx.fill();
-        ctx.beginPath(); //красная  часть version 2
+        ctx.beginPath(); //красная часть
         ctx.fillStyle = '#f33';
         ctx.strokeStyle = '#f33';
         ctx.moveTo(94, 82);
@@ -183,7 +207,10 @@
         ctx.lineTo(95, 83);
         ctx.stroke();
         ctx.fill();
-        //помпон 
+    }
+
+    function pompon() {
+        const ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.fillStyle = '#fe1f3f';
         ctx.strokeStyle = '#000';
@@ -219,7 +246,10 @@
         ctx.ellipse(147, 25, 1.4, 13.5, 3 * Math.PI / 9, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.fill();
-        //брови
+    }
+
+    function eyebrows() {
+        const ctx = c.getContext("2d");
         ctx.beginPath(); //левая
         ctx.strokeStyle = '#4f4348';
         ctx.lineWidth = '1.5';
@@ -230,5 +260,18 @@
         ctx.moveTo(187, 76);
         ctx.lineTo(173.5, 66);
         ctx.stroke();
-    </script>
-</body></html>
+    }
+    pants();
+    body();
+    buttonsAndClasp();
+    collar();
+    hands();
+    outlines();
+    feet();
+    head();
+    eyes();
+    mouth();
+    cap();
+    pompon();
+    eyebrows();
+}
