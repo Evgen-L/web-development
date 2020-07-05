@@ -1,6 +1,4 @@
-window = addEventListener('load', Kyle);
-
-function Kyle() {
+window.onload = function Kyle() {
     const canvas = document.getElementById("Kyle");
 
     function pants() {

@@ -1,6 +1,4 @@
-window = addEventListener('load', Stan);
-
-function Stan() {
+window.onload = function Stan() {
     const canvas = document.getElementById("Stan");
 
     function pants() {
