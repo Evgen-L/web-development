@@ -13,8 +13,8 @@ function Stan() {
     function body() {
         const ctx = c.getContext("2d");
         ctx.beginPath();
-        ctx.ellipse(154, 181, 55, 73, 0, Math.PI + 0.1, 2 * Math.PI - 0.1);
         ctx.fillStyle = '#d26f5f';
+        ctx.ellipse(154, 181, 55, 73, 0, Math.PI + 0.1, 2 * Math.PI - 0.1);
         ctx.fill();
         ctx.beginPath();
         ctx.moveTo(113, 173);
