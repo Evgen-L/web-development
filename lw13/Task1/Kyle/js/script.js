@@ -87,6 +87,34 @@ function Kyle() {
         ctx.lineTo(193, 154);
         ctx.stroke();
     }
+    
+    function pockets(){
+        const ctx = c.getContext("2d");
+        let x = 130;
+        ctx.beginPath(); //левый
+        ctx.lineWidth = '1.1';
+        ctx.strokeStyle = '#332526';
+        ctx.moveTo(x, 154);
+        ctx.lineTo(x + 16, 153);
+        ctx.lineTo(x + 16, 172.5);
+        ctx.lineTo(x, 172.5);
+        ctx.lineTo(x , 154);
+        ctx.lineTo(x + 8, 163);
+        ctx.lineTo(x + 16, 154);
+        ctx.stroke();
+        x = 168;
+        ctx.beginPath(); //правый
+        ctx.lineWidth = '1.1';
+        ctx.strokeStyle = '#332526';
+        ctx.moveTo(x, 153);
+        ctx.lineTo(x + 15.5, 152);
+        ctx.lineTo(x + 15.5, 170.5);
+        ctx.lineTo(x, 170.5);
+        ctx.lineTo(x , 154);
+        ctx.lineTo(x + 7.5, 161.5);
+        ctx.lineTo(x + 15.5, 152);
+        ctx.stroke();
+    }
 
     function feet() {
         const ctx = c.getContext("2d");
@@ -206,6 +234,7 @@ function Kyle() {
     clasp();
     hands();
     outlines();
+    pockets();
     feet();
     head();
     eyes();
