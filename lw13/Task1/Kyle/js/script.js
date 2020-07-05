@@ -178,14 +178,11 @@ function Kyle() {
         ctx.lineTo(151.5, 120.5);
         ctx.fill();
     }
-
+    
     function cap() {
         const ctx = c.getContext("2d");
         
     }
-
-   
-
     function eyebrows() {
         const ctx = c.getContext("2d");
         ctx.beginPath(); //левая
@@ -199,6 +196,10 @@ function Kyle() {
         ctx.lineTo(173, 60);
         ctx.stroke();
     }
+
+
+   
+
     pants();
     body();
     collar();
