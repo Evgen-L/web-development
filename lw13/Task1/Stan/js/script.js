@@ -71,7 +71,6 @@ function Stan() {
         ctx.arc(108, 170, 9, 0, 2 * Math.PI);
         ctx.fill();
         ctx.beginPath();
-        ctx.fillStyle = '#ff1c3d';
         ctx.strokeStyle = '#000';
         ctx.lineWidth = 0.2;
         ctx.arc(114, 167, 4, 0, 2 * Math.PI);
