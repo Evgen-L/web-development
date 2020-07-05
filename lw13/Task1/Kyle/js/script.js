@@ -116,24 +116,24 @@ function Kyle() {
         ctx.fillStyle = '#fff';
         ctx.strokeStyle = '#000';
         ctx.lineWidth = 3.4;
-        ctx.ellipse(137.5, 92, 15, 18, Math.PI / 5, 0, 2 * Math.PI);
+        ctx.ellipse(139.5, 88, 17, 19, Math.PI / 5, 0, 2 * Math.PI);
         ctx.fill();
         //левая черная глазница 
         ctx.beginPath();
         ctx.fillStyle = '#000';
-        ctx.arc(142.9, 93, 1.8, 0, Math.PI * 2, true);
+        ctx.arc(145.5, 88, 2, 0, Math.PI * 2, true);
         ctx.fill();
         //правый белок   
         ctx.beginPath();
         ctx.fillStyle = '#fff';
         ctx.strokeStyle = '#000';
         ctx.lineWidth = 3.4;
-        ctx.ellipse(170, 92, 15, 18, Math.PI / -5, 0, 2 * Math.PI);
+        ctx.ellipse(174, 88, 16, 19, Math.PI / -5, 0, 2 * Math.PI);
         ctx.fill();
         //праввя черная глазница 
         ctx.beginPath();
         ctx.fillStyle = '#000';
-        ctx.arc(162.5, 92.5, 1.8, 0, Math.PI * 2, true);
+        ctx.arc(164.7, 88, 2, 0, Math.PI * 2, true);
         ctx.fill();
     }
 
@@ -142,40 +142,40 @@ function Kyle() {
         const ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.fillStyle = '#322d31';
-        ctx.moveTo(140, 122);
-        ctx.quadraticCurveTo(156.5, 121, 173, 122);
-        ctx.quadraticCurveTo(167, 128.5, 157, 135);
-        ctx.quadraticCurveTo(143.5, 128.5, 140, 122);
+        ctx.moveTo(142, 120);
+        ctx.quadraticCurveTo(158.5, 119, 175, 120);
+        ctx.quadraticCurveTo(169, 126.5, 159, 133);
+        ctx.quadraticCurveTo(145.5, 126.5, 142, 120);
         ctx.fill();
         //зубы     
         ctx.beginPath(); //4 зуб
         ctx.fillStyle = '#fff';
-        ctx.moveTo(171, 122.5);
-        ctx.lineTo(166, 127);
-        ctx.lineTo(164, 127);
-        ctx.lineTo(165, 122.5);
-        ctx.lineTo(170, 122.5);
+        ctx.moveTo(173, 120.5);
+        ctx.lineTo(168, 125);
+        ctx.lineTo(166, 125);
+        ctx.lineTo(167, 120.5);
+        ctx.lineTo(172, 120.5);
         ctx.fill();
         ctx.beginPath(); //3 зуб
-        ctx.moveTo(164.5, 122.5);
-        ctx.lineTo(162.5, 127);
-        ctx.lineTo(157, 127);
-        ctx.lineTo(157, 122.5);
-        ctx.lineTo(164.5, 122.5);
+        ctx.moveTo(166.5, 120.5);
+        ctx.lineTo(164.5, 125);
+        ctx.lineTo(159, 125);
+        ctx.lineTo(159, 120.5);
+        ctx.lineTo(166.5, 120.5);
         ctx.fill();
         ctx.beginPath(); //2 зуб
-        ctx.moveTo(156.5, 122.5);
-        ctx.lineTo(156.5, 127);
-        ctx.lineTo(150, 127);
-        ctx.lineTo(150, 122.5);
-        ctx.lineTo(156.5, 122.5);
+        ctx.moveTo(158.5, 120.5);
+        ctx.lineTo(158.5, 125);
+        ctx.lineTo(152, 125);
+        ctx.lineTo(152, 120.5);
+        ctx.lineTo(158.5, 120.5);
         ctx.fill();
         ctx.beginPath(); //1 зуб
-        ctx.moveTo(149.5, 122.5);
-        ctx.lineTo(149.5, 127);
-        ctx.lineTo(145, 127);
-        ctx.lineTo(143, 122.5);
-        ctx.lineTo(149.5, 122.5);
+        ctx.moveTo(151.5, 120.5);
+        ctx.lineTo(151.5, 125);
+        ctx.lineTo(147, 125);
+        ctx.lineTo(145, 120.5);
+        ctx.lineTo(151.5, 120.5);
         ctx.fill();
     }
 
@@ -191,12 +191,12 @@ function Kyle() {
         ctx.beginPath(); //левая
         ctx.strokeStyle = '#4f4348';
         ctx.lineWidth = '1.5';
-        ctx.moveTo(115, 79.5);
-        ctx.lineTo(127.5, 67);
+        ctx.moveTo(122, 70);
+        ctx.lineTo(138, 59);
         ctx.stroke();
         ctx.beginPath(); //правая 
-        ctx.moveTo(187, 76);
-        ctx.lineTo(173.5, 66);
+        ctx.moveTo(189, 70);
+        ctx.lineTo(173, 60);
         ctx.stroke();
     }
     pants();
