@@ -1,17 +1,17 @@
 window = addEventListener('load', Stan);
 
 function Stan() {
-    const c = document.getElementById("Stan");
+    const canvas = document.getElementById("Stan");
 
     function pants() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.fillStyle = '#3872c3';
         ctx.rect(116, 161, 80.1, 34);
         ctx.fill();
     }
 
     function body() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.beginPath();
         ctx.fillStyle = '#d26f5f';
         ctx.ellipse(154, 181, 55, 73, 0, Math.PI + 0.1, 2 * Math.PI - 0.1);
@@ -25,7 +25,7 @@ function Stan() {
     }
 
     function buttonsAndClasp() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.beginPath();
         ctx.fillStyle = '#3b3236';
         ctx.arc(150, 154, 1.5, 0, Math.PI * 2, true);
@@ -40,7 +40,7 @@ function Stan() {
     }
 
     function collar() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.beginPath(); //левый
         ctx.fillStyle = '#ff2042';
         ctx.strokeStyle = '#91313b'
@@ -65,7 +65,7 @@ function Stan() {
     }
 
     function hands() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.beginPath(); //левая
         ctx.fillStyle = '#ff1c3d';
         ctx.arc(108, 170, 9, 0, 2 * Math.PI);
@@ -86,7 +86,7 @@ function Stan() {
     }
 
     function outlines() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.beginPath(); //левый
         ctx.lineWidth = 0.5;
         ctx.moveTo(115, 164);
@@ -99,7 +99,7 @@ function Stan() {
     }
 
     function feet() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.beginPath();
         ctx.strokeStyle = 'black';
         ctx.lineWidth = 1;
@@ -113,7 +113,7 @@ function Stan() {
     }
 
     function head() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.beginPath();
         ctx.fillStyle = '#ffeac1';
         ctx.arc(153, 86, 58, 0, Math.PI * 2, true);
@@ -121,7 +121,7 @@ function Stan() {
     }
 
     function eyes() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         //левый белок   
         ctx.beginPath();
         ctx.fillStyle = '#fff';
@@ -150,7 +150,7 @@ function Stan() {
 
     function mouth() {
         //ротовая полость 
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.beginPath();
         ctx.fillStyle = '#322d31';
         ctx.moveTo(140, 122);
@@ -191,7 +191,7 @@ function Stan() {
     }
 
     function cap() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.beginPath(); //синяя часть
         ctx.fillStyle = '#36c';
         ctx.arc(153, 82, 57, -0.2, 3.3, true);
@@ -209,7 +209,7 @@ function Stan() {
     }
 
     function pompon() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.beginPath();
         ctx.fillStyle = '#fe1f3f';
         ctx.strokeStyle = '#000';
@@ -248,7 +248,7 @@ function Stan() {
     }
 
     function eyebrows() {
-        const ctx = c.getContext("2d");
+        const ctx = canvas.getContext("2d");
         ctx.beginPath(); //левая
         ctx.strokeStyle = '#4f4348';
         ctx.lineWidth = '1.5';
